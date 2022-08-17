@@ -79,6 +79,13 @@ class ResultProcessor {
         return " Fail";
     }
 
+    public String getTotalSubjectRemark(int mark1, int mark2, int mark3, int mark4) {
+        if(mark1 >= 40 && mark1 <= 100 && mark2 >= 40 && mark2 <= 100 && mark3 >= 40 && mark3 <= 100 && mark4 >= 40 && mark4 <= 100) {
+            return "Pass";
+        }
+        return "Fail";
+    }
+
     public void showResult() {
         System.out.println("************Result************");
         System.out.println();
@@ -87,6 +94,7 @@ class ResultProcessor {
         System.out.println("Subject 2: " + this.getSub2() + " REMARK " + this.getRemark(this.getSub2()));
         System.out.println("Subject 3: " + this.getSub3() + " REMARK " + this.getRemark(this.getSub3()));
         System.out.println("Subject 4: " + this.getSub4() + " REMARK " + this.getRemark(this.getSub4()));
+        System.out.println("You have " + this.getTotalSubjectRemark(this.getSub1(), this.getSub2(), this.getSub3(), this.getSub4()));
     }
 
 }
